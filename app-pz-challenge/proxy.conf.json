@@ -1,0 +1,11 @@
+{
+    "/": {
+        "target":  {
+            "host": "pbmedia.pepblast.com/pz_challenge",
+            "protocol": "https:",
+            "port": 443
+        },
+        "secure": false,
+        "changeOrigin": true
+        }
+}
