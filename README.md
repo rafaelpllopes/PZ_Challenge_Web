@@ -34,3 +34,14 @@ Seu projeto será avaliado conforme os critérios:
 4. Boas práticas de programação;
 5. Código bem escrito, fácil de entender e manter;
 6. Interface e uso da aplicação pelo Usuário;
+
+
+## Sobre o projeto
+
+1. Fiz o fork do projeto no github https://github.com/rafaelpllopes/PZ_Challenge_Web
+2. Clonei o projeto PZ_Challenge_Web
+3. Na pasta do projeto foi criado com o angular-cli a pasta onde sera criado os componentes do projeto, com o comando ng new app-pz-challenge.
+4. Baixei a ultima versao do bootstrap "4" para utilizar no projeto como estilo. "npm install bootstrap@next --save"
+5. Em styles.css foi importado o bootstrap para utilizar no projeto. "@import '~bootstrap/dist/css/bootstrap.min.css'".
+6. Para desenvolvimento sera usado o ng server, que executa no localhost:4200 por padrao.
+7. Criado o componente lista.
