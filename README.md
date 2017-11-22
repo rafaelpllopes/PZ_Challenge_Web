@@ -38,6 +38,7 @@ Seu projeto será avaliado conforme os critérios:
 
 ## Sobre o projeto
 
+>> Inicio
 1. Fiz o fork do projeto no github https://github.com/rafaelpllopes/PZ_Challenge_Web
 2. Clonei o projeto PZ_Challenge_Web
 3. Na pasta do projeto foi criado com o angular-cli a pasta onde sera criado os componentes do projeto, com o comando ng new app-pz-challenge.
@@ -45,3 +46,47 @@ Seu projeto será avaliado conforme os critérios:
 5. Em styles.css foi importado o bootstrap para utilizar no projeto. "@import '~bootstrap/dist/css/bootstrap.min.css'".
 6. Para desenvolvimento sera usado o ng server, que executa no localhost:4200 por padrao.
 7. Criado o componente lista.
+
+* Utilizei nodejs para obter o json devido ao cors (Cross-origin resource sharing) e ser o servidor;
+* Para o frontend angular e estico com bootstrap 4;
+* O frontend esta disponivel na pasta app-pz-challenge, as configuraçoes do nodejs estao na pasta server
+
+>> Requisitos
+* angular-cli
+* nodejs
+
+## Nodejs
+>> servidor para buscar json pela internet solucionando o problema de cors 
+>> dependencias
+* express: 4.16.1 "npm install --save express"
+* consign: 0.1.6 "npm install --save consign"
+* body-parser: 1.18.2 "npm install --save body-parser"
+* restify-clients: 1.5.2 "npm install --save restify-clients"
+* cors: 2.8.4 "npm install --save cors"
+
+>> server.js
+arquivo que possui as configuracoes para que o servidor possa rodar.
+
+>> pasta config
+Pasta que contem as configurcoes do servidor
+
+>> pasta app
+Pasta que contem o arquivo para buscar o json
+
+>> Como utilizar
+1. Na pasta PZ Challenge WEB
+2. Va em server
+3. Instale as dependencias com o comando npm install
+4. Suba o servidor com o comando npm start ou node server.js
+
+## Aplicaçao (angular)
+>> dependencias
+* Iniciar o projeto na pasta PZ_Challenge_web, ng new app-pz-challenge
+* bootstrap 4: npm install bootstrap@next --save "Em styles.css foi importado o bootstrap para utilizar no projeto. "@import '~bootstrap/dist/css/bootstrap.min.css'"
+* Para desenvolvimento sera usado o ng server, que executa no localhost:4200 por padrao.
+* Criado o componente lista com o comando ng g c lista
+
+>> versao desenvolvimento
+
+1. Start o servidor com o comando ng start
+2. Abrir no navegador localhost:4200
