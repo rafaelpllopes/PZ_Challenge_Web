@@ -1,14 +1,20 @@
-<section *ngFor='let imagem of imagens'> 
-  <ul *ngFor='let item of imagem.objects'>
-      <li *ngIf='item.name'>{{item.name}}</li>
-      <li *ngIf='item.bg'>{{item.bg}}</li>
-      <li *ngIf='item.in'>{{item.in}}</li>
-      <li *ngIf='item.sg'>{{item.sg}}</li>
-      <li *ngIf='item.txts'>
+<section class="container" *ngFor='let imagem of imagens'> 
+  <section *ngFor='let item of imagem.objects'>
+      <h2 *ngIf='item.name'>{{item.name}}</h2>
+      <figure *ngIf='item.im'>
+        <img src="{{imagem.assetsLocation}}/{{item.im}}" alt="{{item.im}}" >
+      </figure>
+      <!--
+      <p *ngIf='item.bg'>{{item.bg}}</p>
+      <p *ngIf='item.sg'>{{item.sg}}</p>
+      <section *ngIf='item.txts'>
         <ul *ngFor='let txt of item.txts'>
           <li *ngIf='txt.txt'>{{txt.txt}}</li>
           <li *ngIf='txt.time'>{{txt.time}}</li>
         </ul>
-      </li>
-  </ul>
+      </section>
+      -->
+  </section>
 </section>
+
+<!--http://pbmedia.pepblast.com/pz_challenge/assets-->
