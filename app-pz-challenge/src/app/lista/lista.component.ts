@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Http, Headers  } from '@angular/http'
 import { ImagesService } from '../services/images-service';
-import { ArrayObservable } from 'rxjs/observable/ArrayObservable';
 
 @Component({
   selector: 'app-lista',
