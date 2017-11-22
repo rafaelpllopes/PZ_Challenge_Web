@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule, JsonpModule } from '@angular/http';
+import { Routing }  from './app.routes';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 
@@ -18,7 +19,8 @@ import { ImagesService } from './services/images-service';
   imports: [
     BrowserModule,
     HttpModule,
-    JsonpModule
+    JsonpModule,
+    Routing
   ],
   providers: [ImagesService],
   bootstrap: [AppComponent]
