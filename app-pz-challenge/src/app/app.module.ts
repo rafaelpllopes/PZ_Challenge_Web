@@ -9,12 +9,14 @@ import 'rxjs/add/operator/filter';
 import { AppComponent } from './app.component';
 import { ListaComponent } from './lista/lista.component';
 import { ImagesService } from './services/images-service';
+import { VideoComponent } from './video/video.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaComponent
+    ListaComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,
