@@ -1,8 +1,8 @@
 <section class="container" *ngFor='let imagem of imagens'> 
-  <section class="lista" *ngFor='let item of imagem.objects'>
-      <h2 *ngIf='item.name'>{{item.name}}</h2>
-      <figure *ngIf='item.im' class="figure">
-        <a href="">
+  <section class="lista" *ngFor='let item of imagem.objects; let i = index'>
+      <h2>{{item.name}}</h2>
+      <figure class="figure">
+        <a [routerLink]="['/video', i]">
           <img class='figure-img img-fluid rounded' src="{{imagem.assetsLocation}}/{{item.im}}" alt="{{item.im}}" >
         </a>
         <figcaption class="figure-caption">{{item.name}}</figcaption>
