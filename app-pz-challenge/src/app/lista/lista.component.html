@@ -1,8 +1,11 @@
 <section class="container" *ngFor='let imagem of imagens'> 
-  <section *ngFor='let item of imagem.objects'>
+  <section class="lista" *ngFor='let item of imagem.objects'>
       <h2 *ngIf='item.name'>{{item.name}}</h2>
-      <figure *ngIf='item.im'>
-        <img src="{{imagem.assetsLocation}}/{{item.im}}" alt="{{item.im}}" >
+      <figure *ngIf='item.im' class="figure">
+        <a href="">
+          <img class='figure-img img-fluid rounded' src="{{imagem.assetsLocation}}/{{item.im}}" alt="{{item.im}}" >
+        </a>
+        <figcaption class="figure-caption">{{item.name}}</figcaption>
       </figure>
       <!--
       <p *ngIf='item.bg'>{{item.bg}}</p>
