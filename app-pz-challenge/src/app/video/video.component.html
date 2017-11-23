@@ -1,5 +1,5 @@
 <section class="embed-responsive embed-responsive-21by9 margem">
-  <canvas id='canvas' #canvas></canvas>
+  <canvas id='canvas' #canvas width="400" height="100"></canvas>
   <video #controlVideo id='controlVideo' class="embed-responsive-item" preload loop autoplay>
     <source src="{{urlVideo}}" type="video/mp4">
   </video>
@@ -11,13 +11,13 @@
   <nav aria-label="Index das videos">
       <ul class="pagination justify-content-center pagination-lg">
         <li class="page-item">
-          <button class="page-link" (click)='anterio()' [routerLink]="['']" >Previous</button>
+          <button [disabled]='id == 0' class="page-link" (click)='anterior()' [routerLink]="['']" >Previous</button>
         </li>
         <li class="page-item">
             <button class="page-link">...</button>
         </li>
         <li class="page-item">
-            <button class="page-link"  (click)='proximo()' [routerLink]="['']">Next</button>
+            <button [disabled]='id == 9' class="page-link"  (click)='proximo()' [routerLink]="['']">Next</button>
         </li>
       </ul>
     </nav>

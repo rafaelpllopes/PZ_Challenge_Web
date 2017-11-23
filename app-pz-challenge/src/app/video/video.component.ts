@@ -48,18 +48,24 @@ export class VideoComponent implements OnInit {
       let minuto;
       let segundo;
       let tempo;
+      let index = 0;
+      let ctx = this.canvas.nativeElement.getContext('2d');
       //Verifica o tempo para desenhar o canvas
       let timer = setInterval(() =>{
-        minuto = Math.floor(this.controlAudio.nativeElement.currentTime / 60);
-        segundo = Math.floor(((this.controlAudio.nativeElement.currentTime / 60) %1 ) * 60);
-        tempo = `${minuto}.${segundo}`;
-        //console.log(tempo);
-        if(tempo == this.video.txts[0].time){
-          let ctx = this.canvas.nativeElement.getContext('2d');
-          ctx.font = '60px serif';
-          ctx.fillStyle = "yellow";
-          ctx.fillText(this.video.txts[0].txt, 0, 65);
-          clearInterval(timer);
+        //minuto = Math.floor(this.controlAudio.nativeElement.currentTime / 60);
+        //segundo = Math.floor(((this.controlAudio.nativeElement.currentTime / 60) %1 ) * 60);
+        tempo = this.controlAudio.nativeElement.currentTime; //`${minuto}.${segundo}`;
+        console.log(tempo);
+        if(tempo >= this.video.txts[index].time){
+          ctx.fillRect(1, 50, this.canvas.nativeElement.width, this.canvas.nativeElement.height);
+          ctx.clearRect(0, 0, this.canvas.nativeElement.width, this.canvas.nativeElement.height);
+          ctx.font = 'bold 60px serif';
+          ctx.fillStyle = "#F5FFFA";
+          ctx.fillText(this.video.txts[index].txt, 0, 50);
+          if(index == 1){
+            clearInterval(timer);
+          }
+          index++;       
         }
       },0);
     }
