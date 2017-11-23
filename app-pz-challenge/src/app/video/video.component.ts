@@ -55,7 +55,6 @@ export class VideoComponent implements OnInit {
         //minuto = Math.floor(this.controlAudio.nativeElement.currentTime / 60);
         //segundo = Math.floor(((this.controlAudio.nativeElement.currentTime / 60) %1 ) * 60);
         tempo = this.controlAudio.nativeElement.currentTime; //`${minuto}.${segundo}`;
-        console.log(tempo);
         if(tempo >= this.video.txts[index].time){
           ctx.fillRect(1, 50, this.canvas.nativeElement.width, this.canvas.nativeElement.height);
           ctx.clearRect(0, 0, this.canvas.nativeElement.width, this.canvas.nativeElement.height);
