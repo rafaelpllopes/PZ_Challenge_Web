@@ -1,6 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Observable } from 'rxjs';
-//import { Http, Headers  } from '@angular/http';
 import { JsonService } from '../services/json-service';
 
 @Component({
@@ -18,7 +17,7 @@ export class ListaComponent implements OnInit {
 
   ngOnInit() {
     this.service.addVideos.subscribe(itens => this.imagens = itens);
-    this.imagens = this.service.videos;    
+    this.imagens = this.service.videos;
   }
 
   

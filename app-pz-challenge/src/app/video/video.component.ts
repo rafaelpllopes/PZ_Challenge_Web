@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, ViewChild, OnChanges } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { JsonService } from '../services/json-service';
 
@@ -13,7 +13,7 @@ export class VideoComponent implements OnInit {
   @Output() addVideos = new EventEmitter();
 
   //Variavel para armazenar o id
-  private id;
+  private id: number;
   //Variavel que carrega o objeto video
   private video;
   //Variavel que armazena os objetos que vem do service
@@ -30,7 +30,7 @@ export class VideoComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private router: Router, private service: JsonService) {
     this.route.params.subscribe(params => {
-      this.id = params['id'];
+      this.id = Number(params['id']);
       this.video = this.service.getVideo(this.id);
     });
   }
@@ -44,10 +44,6 @@ export class VideoComponent implements OnInit {
   
   //Evento que ocorre apos o component carregar
   ngAfterViewInit() {
-    /*console.log(this.controlAudio);
-    console.log(this.video.txts[0].txt);
-    console.log(this.video.txts[0].time);
-    console.log(this.canvas.nativeElement);*/
     if(this.video.txts){
       let minuto;
       let segundo;
@@ -77,5 +73,24 @@ export class VideoComponent implements OnInit {
         return;
       }
     }, 0);
+  }
+
+  //Metodo que volta para o video anterior
+  anterior() {
+    if(this.id > 0) {
+      setTimeout(() => {
+        this.router.navigate([`/video/${this.id - 1}`]);
+      }, 10); 
+    }
+  }
+
+  //Metodo que vai para o proximo video  
+  proximo() {
+    if(this.id < 9){
+      let host = location.host;
+      setTimeout(() => {
+        this.router.navigate([`/video/${this.id + 1}`]);
+      }, 10);      
+    }
   }
 }

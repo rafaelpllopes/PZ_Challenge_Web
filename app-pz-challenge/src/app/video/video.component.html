@@ -1,4 +1,4 @@
-<div class="embed-responsive embed-responsive-21by9">
+<section class="embed-responsive embed-responsive-21by9 margem">
   <canvas id='canvas' #canvas></canvas>
   <video #controlVideo id='controlVideo' class="embed-responsive-item" preload loop autoplay>
     <source src="{{urlVideo}}" type="video/mp4">
@@ -6,4 +6,19 @@
   <audio #controlAudio id='controlAudio' preload autoplay>
     <source src="{{urlAudio}}" type="audio/mpeg">
   </audio>
-</div>
+</section>
+<section class="margem">
+  <nav aria-label="Index das videos">
+      <ul class="pagination justify-content-center pagination-lg">
+        <li class="page-item">
+          <button class="page-link" (click)='anterio()' [routerLink]="['']" >Previous</button>
+        </li>
+        <li class="page-item">
+            <button class="page-link">...</button>
+        </li>
+        <li class="page-item">
+            <button class="page-link"  (click)='proximo()' [routerLink]="['']">Next</button>
+        </li>
+      </ul>
+    </nav>
+</section>

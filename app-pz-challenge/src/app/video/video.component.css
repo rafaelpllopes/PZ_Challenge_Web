@@ -1,8 +1,3 @@
-video {
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-
 #canvas {
     position: absolute;
     top: 2%;
@@ -11,3 +6,7 @@ video {
     z-index: 1;
 }
 
+.margem {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
