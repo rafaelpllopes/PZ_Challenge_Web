@@ -2,3 +2,12 @@ video {
     margin-top: 2em;
     margin-bottom: 2em;
 }
+
+#canvas {
+    position: absolute;
+    top: 2%;
+    right: 50%;
+    left: 50%;
+    z-index: 1;
+}
+
