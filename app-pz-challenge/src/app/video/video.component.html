@@ -1,3 +1,9 @@
-<p>
-  {{id}}
-</p>
+<div class="embed-responsive embed-responsive-21by9">
+  <video #controlVideo id='controlVideo' class="embed-responsive-item" preload loop autoplay>
+    <source src="{{urlVideo}}" type="video/mp4">
+  </video>
+  <audio #controlAudio id='controlAudio' preload autoplay>
+    <source src="{{urlAudio}}" type="audio/mpeg">
+  </audio>
+</div>
+

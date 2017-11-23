@@ -5,10 +5,9 @@ import { Routing }  from './app.routes';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 
-
 import { AppComponent } from './app.component';
 import { ListaComponent } from './lista/lista.component';
-import { ImagesService } from './services/images-service';
+import { JsonService } from './services/json-service';
 import { VideoComponent } from './video/video.component';
 
 
@@ -24,7 +23,7 @@ import { VideoComponent } from './video/video.component';
     JsonpModule,
     Routing
   ],
-  providers: [ImagesService],
+  providers: [JsonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
