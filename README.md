@@ -76,7 +76,9 @@ Pasta que contem o arquivo para buscar o json
 3. Na pasta da aplicação iniciar em server iniciar o servidor node "npm start"
 4. Acessar a pasta da aplicação e ir para pasta app-pz-challenge;
 5. Iniciar com ng server ou ng server --port “Número da porta”;
-6. Abrir o navegador e entrar no endereço localhost:4200 ou localhost:“número da porta”
+6. Abrir o navegador e entrar no endereço localhost:4200 ou localhost:“número da porta”.
+
+* "ng build --prod" para gerar os arquivos de produção já otimizado e minificados.
 
 >> Configurações da minha máquina
 * Angular CLI: 1.5.0
