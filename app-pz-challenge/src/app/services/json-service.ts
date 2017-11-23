@@ -8,6 +8,7 @@ export class JsonService {
     //Instancia do EventEmitter (Eventos Globais)
     addVideos = new EventEmitter();
     //variavel que armazena a url que possui o json
+    //private url: string = 'https://pbmedia.pepblast.com/pz_challenge/assets.json';
     private url: string = 'http://localhost:3000/json';
 
     constructor(private http: Http) {
