@@ -10,7 +10,7 @@ import { JsonService } from '../services/json-service';
 export class ListaComponent implements OnInit {
 
   //Array para armazenar os objetos
-  private imagens: Array<any> = [];
+  imagens: Array<any> = [];
   @Output() addVideos = new EventEmitter();
   
   constructor(private service: JsonService) {}

@@ -13,15 +13,15 @@ export class VideoComponent implements OnInit {
   @Output() addVideos = new EventEmitter();
 
   //Variavel para armazenar o id
-  private id: number;
+  id: number;
   //Variavel que carrega o objeto video
-  private video;
+  video;
   //Variavel que armazena os objetos que vem do service
-  private itens: Array<any>;
+  itens: Array<any>;
   //Variavel que armazena a url do video
-  private urlVideo: string;
+  urlVideo: string;
   //Variavel que armazena a url do audio
-  private urlAudio: string;
+  urlAudio: string;
   
   //Decorator para permitir captura um elemento
   @ViewChild('controlVideo') controlVideo;

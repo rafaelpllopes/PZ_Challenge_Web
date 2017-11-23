@@ -13,6 +13,7 @@ module.exports = () => {
     //Middlewares
     //carrega a pagina
     app.use(cors());
+    app.use(express.static('./dist'));
     app.use(body.urlencoded({extended: true}));
     app.use(body.json());
     app.use((req, res, next) => {
