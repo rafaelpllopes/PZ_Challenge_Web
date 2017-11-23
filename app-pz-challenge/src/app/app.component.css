@@ -1,3 +1,23 @@
 #app {
     text-transform: uppercase;
 }
+
+header {
+    background-color: #bdbdbd;
+    text-align: center;
+    text-transform: uppercase;
+    color: #757575;
+}
+
+footer {
+    height: 3rem;
+    background-color: #bdbdbd;
+    color: #757575;
+    padding: 1rem;
+}
+
+.git-icon {
+    width: 1rem;
+    height: 1rem;
+    vertical-align: text-top;
+}

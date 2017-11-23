@@ -1,6 +1,8 @@
 .lista {
     margin-bottom: 2em;
     text-align: center;
+    background-color: #FFF;
+    border: solid #e0e0e0 1px;
 }
 
 .lista h2 {

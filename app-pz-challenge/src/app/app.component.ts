@@ -8,6 +8,7 @@ import { JsonService } from './services/json-service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+  titulo: string = "Pz Challenge Web";
+  author: string = "Rafael Pereira de Lacerda Lopes";
   constructor(){}
 }

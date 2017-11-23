@@ -14,7 +14,9 @@
           <button [disabled]='id == 0' class="page-link" (click)='anterior()' [routerLink]="['']" >Previous</button>
         </li>
         <li class="page-item">
-            <button class="page-link">...</button>
+            <a class="page-link" [routerLink]="['']">
+              <img class='icon' src="../../assets/open-iconic/svg/home.svg" alt="home">
+            </a>
         </li>
         <li class="page-item">
             <button [disabled]='id == 9' class="page-link"  (click)='proximo()' [routerLink]="['']">Next</button>
