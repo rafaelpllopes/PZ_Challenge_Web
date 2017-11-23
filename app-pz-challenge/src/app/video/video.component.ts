@@ -44,6 +44,12 @@ export class VideoComponent implements OnInit {
   
   //Evento que ocorre apos o component carregar
   ngAfterViewInit() {
+    //Iniciar video e audio apos 5s para o preload conseguir ter carregado um pouco de ambos
+    setTimeout(() => {
+      this.controlVideo.nativeElement.play();
+      this.controlAudio.nativeElement.play();
+    }, 5000);
+
     if(this.video.txts){
       let minuto;
       let segundo;
